@@ -80,3 +80,52 @@
           |                        ^
        main.cpp:17:24: error: missing terminating " character
     ```
+**1.4. Flow of Control**
+* Exercises Section 1.4.1
+  * Exercise 1.9: Write a program that uses a while to sum the numbers from 50 to 100.
+    ```c++
+    #include <iostream>
+    using namespace std;
+
+    int main()
+    {
+        int i = 50;
+        int sum = 0;
+        while (i <= 100) {
+            sum += i++;
+        }
+        cout << sum << endl;
+        return 0;
+    }
+    ```
+  * Exercise 1.10: In addition to the ++ operator that adds 1 to its operand, there is a decrement operator (--) that subtracts 1. Use the decrement operator to write a while that prints the numbers from ten down to zero.
+    ```c++
+    #include <iostream>
+    using namespace std;
+
+    int main()
+    {
+        int i = 10;
+        while (i >= 0) {
+            cout << i-- << endl;
+        }
+        return 0;
+    }
+    ```
+  * Exercise 1.11: Write a program that prompts the user for two integers. Print each number in the range specified by those two integers.
+    ```c++
+    #include <iostream>
+    using namespace std;
+
+    int main()
+    {
+        int lower = 0;
+        int higher = 0;
+        cout << "input 2 integers, please." << endl;
+        cin >> lower >> higher;
+        while (lower <= higher) {
+            cout << lower++ << endl;
+        }
+        return 0;
+    }
+    ```
