@@ -46,3 +46,37 @@
               << " is " << v1 + v2 << std::endl;
     ```
     > this is illegal.
+**1.3 A Word about Comments**
+* Exercises Section 1.3
+  * Exercise 1.7: Compile a program that has incorrectly nested comments.
+    ```c++
+    int main()
+    {
+      cout<<"Hello World" << endl;
+      /*
+      * asd */
+      *
+      */
+
+      return 0;
+    }
+    ```
+    ```
+    main.cpp:19:6: error: expected primary-expression before ‘/’ token
+     19 |     */
+        |      ^
+    ```
+  * Exercise 1.8: Indicate which, if any, of the following output statements are legal:
+    ```c++
+    Click here to view code image
+    std::cout << "/*";
+    std::cout << "*/";
+    std::cout << /* "*/" */;
+    std::cout << /* "*/" /* "/*" */;
+    ```
+    After you’ve predicted what will happen, test your answers by compiling a program with each of these statements. Correct any errors you encounter.
+    ```c++
+       17 |     std::cout << /* "*/" */;
+          |                        ^
+       main.cpp:17:24: error: missing terminating " character
+    ```
