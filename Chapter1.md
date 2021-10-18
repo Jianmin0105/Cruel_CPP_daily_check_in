@@ -129,3 +129,39 @@
         return 0;
     }
     ```
+* Exercises Section 1.4.2
+  * Exercise 1.12: What does the following for loop do? What is the final value of sum? > `0`
+    `Click here to view code image
+      int sum = 0;
+      for (int i = -100; i <= 100; ++i)
+        sum += i;`
+  * Exercise 1.13: Rewrite the exercises from § 1.4.1 (p. 13) using for loops.
+  * Exercise 1.14: Compare and contrast the loops that used a for with those using a while. Are there advantages or disadvantages to using either form?
+  * Exercise 1.15: Write programs that contain the common errors discussed in the box on page 16. Familiarize yourself with the messages the compiler generates.
+    ```
+    // error: missing ) in parameter list for main int main ( {
+    // error: used colon, not a semicolon, after endl
+    std::cout << "Read each file." << std::endl: // error: missing quotes around string literal
+    std::cout << Update master. << std::endl;
+    // error: second output operator is missing
+    std::cout << "Write new master." std::endl; // error: missing ; on return statement
+    return 0
+    }
+    ```
+* Exercises Section 1.4.3
+  * Exercise 1.16: Write your own version of a program that prints the sum of a set of integers read from cin.
+    ```c++
+    #include <iostream>
+    using namespace std;
+
+    int main()
+    {   
+        int sum = 0, val = 0;
+        while (cin >> val) 
+        {
+            sum += val;
+        }
+        std::cout << sum << std::endl;
+        return 0;
+    }
+    ```
